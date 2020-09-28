@@ -1,0 +1,42 @@
+.pagination {
+	display: flex;
+	margin: 1.8rem 0;
+ 
+	&__prev,
+	&__next {
+		font-weight: bold;
+		color: var(--color-link);
+		transition-property: transform;
+		transition-timing-function: ease-out;
+		transition-duration: 0.3s;
+		flex: 1;
+		flex-grow: 1;
+	}
+
+	&__prev {
+		align-self: flex-start;
+
+		&:before {
+			content: "↼";
+		}
+
+		&:hover {
+			color: var(--color-text);
+      		transform: translateX(-4px); 
+		}
+	}
+
+	&__next {
+		align-self: flex-end;
+		text-align: right;
+
+		&:after {
+			content: "⇀";
+		}
+
+		&:hover {
+			color: var(--color-text);
+      		transform: translateX(4px); 
+		}
+	}
+}

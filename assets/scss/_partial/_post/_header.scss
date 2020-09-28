@@ -1,0 +1,14 @@
+.post-header {
+	&__banner {
+		object-fit: cover;
+		height: 25rem;
+		width: 100%;
+		object-position: center;
+	}
+
+	&__subtitle {
+		font-style: italic;
+		font-size: 1.5rem;
+		opacity: .85;
+	}
+}

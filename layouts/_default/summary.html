@@ -1,0 +1,30 @@
+<article class="summary">
+	<a class="summary__link" href="{{.Page.RelPermalink }}">
+		{{$path := substr .Page.RelPermalink 7 }}
+
+		<img class="summary__banner"
+			src='{{ printf "%simages/posts/thumbnail/%s%s" .Site.BaseURL $path "banner.png" }}'
+			srcset='
+				{{ printf "%simages/posts/thumbnail/%s%s" .Site.BaseURL $path "banner.png" }} 750w,
+				{{ printf "%simages/posts/tablet/%s%s" .Site.BaseURL $path "banner.png" }} 1600w
+			'
+			sizes="
+			(min-width: 375px) and (max-width:  767px) 800px,
+			calc(100vw - calc(166.66667% - 4rem))" 
+		/>
+
+		<h3 class="summary__title">
+			{{ .Page.Title }}
+		</h3>
+		
+		<div class="summary__meta">
+			{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2 2006" }}    
+			<time class="summary__date" datetime="{{ .Page.PublishDate }}">{{ partial "relative-date.html" . }}</time>
+			<time>
+			{{ T "wordCount" .WordCount }}
+			{{ T "readingTime" .ReadingTime }}
+			</time>
+		</div>
+		<p class="summary__description">{{ .Page.Description }}</p>
+	</a>
+</article>

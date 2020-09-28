@@ -1,0 +1,43 @@
+{{- define "title" }}{{ T "archive" }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "main" }}
+{{- $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
+
+<main class="content" role="main">
+  <section class="archive page">
+    {{- range $index, $element := $paginator.Pages -}}
+      {{- $thisYear := $element.Date.Format "2006" }}
+      {{- $lastElement := $index | add -1 | index $paginator.Pages }}
+      {{- if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
+        <h2 class="archive-year">Blog Posts {{ $thisYear }}</h2>
+      {{- end }}
+      <div class="archive__item">
+        <span class="archive__date">
+          {{ $element.Date.Format "01-02" }}
+        </span>
+        <span class="archive__title">
+          <a href="{{ $element.RelPermalink }}" class="archive__link">
+            {{ .Title }}
+          </a>
+        </span>
+      </div>
+    {{- end -}}
+
+    <!-- pagination -->
+    <nav class="pagination">
+      {{ with $paginator.Prev -}}
+        <a class="pagination__prev" href="{{ .URL }}">
+          <i class="pagination__icon"></i>
+          <span class="pagination__text--mobile">{{ T "prevPage" }}</span>
+        </a>
+      {{- end }}
+      {{ with $paginator.Next -}}
+        <a class="pagination__next" href="{{ .URL }}">
+          <span class="pagination__text--mobile">{{ T "nextPage" }}</span>
+          <i class="pagination__icon"></i>
+        </a>
+      {{- end }}
+    </nav>
+  </section>
+</main>
+{{- end }}

@@ -1,0 +1,16 @@
+@import "_post/summary";
+@import "_post/shareable-links";
+@import "_post/related";
+@import "_post/archive";
+@import "_post/published";
+@import "_post/header";
+@import "_post/sidebar";
+
+.post {
+
+	&__tag {
+		&:before {
+			content: "#";
+		}
+	}
+}

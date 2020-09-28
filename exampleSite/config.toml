@@ -1,0 +1,119 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Wawonii - A pretty nice theme for Hugo"
+enableRobotsTXT = true
+theme = "wawonii"
+
+[author]                            # Author
+  name = "John Doe"
+  username= "johndoe123"
+
+[params]
+  disqusShortname = ""              # disqus_shortname
+  googleAnalytics = ""              # UA-XXXXXXXX-X
+
+  logoTitle = "My Blog"             # default: the title value
+  keywords = ["Hugo", "theme","even"]
+  description = "Hugo theme even example site."
+  
+  paginate = 5                      # paginage on home page
+  limitPost = 10                    # Limit post on home page
+  archivePaginate = 5               # paginate of archives, tags and categories
+  
+  comment = false                   # Enable Disqus comment
+  toc = true                        # Show table of content
+  postMetaInFooter = true           # contain author, lastMod, markdown link, license
+  dateFormat = "2006-01-02"         # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
+  copyright = "© {year} {author} - All rights reserved."    # Copyright in footer
+
+  # e.g. '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
+  contentCopyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
+
+[params.social]
+  email = "mailto:your@email.com"
+  stack-overflow = ""
+  twitter = ""
+  facebook = ""
+  linkedin = ""
+  google = ""
+  github = ""
+  tumblr = ""
+  instagram = ""
+  gitlab = ""
+
+[params.reward]
+    enable = false
+    patreonQr = "/path/to/your/patreon-qr-code.png"
+    patreonUrl = 'https://link-to-your-patreon.com/'
+
+[params.publicCDN]                  # load these files from public cdn
+  enable = true
+  modernizer = '<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" crossorigin="anonymous"></script>'
+  mathjax = '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>'
+
+[params.lib]
+  modernizer = '/lib/js/modernizer.min.js'
+  mathjax = '/lib/js/mathjax.min.js'
+
+[params.mathjax]
+  mathjax = false                 # see https://www.mathjax.org/
+  mathjaxEnableSingleDollar = false
+  mathjaxEnableAutoNumber = false
+
+[[menu.main]]                     # config your menu
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Archive"
+  weight = 20
+  identifier = "archives"
+  url = "/posts/"
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "Categories"
+  weight = 40
+  identifier = "categories"
+  url = "/categories/"
+[[menu.main]]
+  name = "About"
+  weight = 50
+  identifier = "about"
+  url = "/about/"
+
+[sitemap]                 # essential
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[taxonomies]              # essential
+   tag = "tags"
+   category = "categories"
+
+# See https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true      # 12.214.31.144 -> 12.214.31.0
+
+# Uncomment these options to make hugo output .md files.
+#[mediaTypes]
+#  [mediaTypes."text/plain"]
+#    suffixes = ["md"]
+#
+#[outputFormats.MarkDown]
+#  mediaType = "text/plain"
+#  isPlainText = true
+#  isHTML = false
+#
+#[outputs]
+#  home = ["HTML", "RSS"]
+#  page = ["HTML", "MarkDown"]
+#  section = ["HTML", "RSS"]
+#  taxonomy = ["HTML", "RSS"]
+#  taxonomyTerm = ["HTML"]

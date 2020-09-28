@@ -1,0 +1,32 @@
+.author {
+	display: flex;
+	padding: 3rem 0;
+
+	&__avatar {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 6rem;
+		flex: 0 0 6rem;
+		margin-right: 2rem;
+
+		img {
+			border-radius: 100%;
+		}
+	}
+
+	&__heading {
+		font-weight: 800;
+		font-size: 1.3rem;
+		margin-bottom: .5rem;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			color: var(--text-color-hsl);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,33 @@
+<header class="header">
+	<div class="header__container">
+		<div class="header__branding">
+		  <a class="header__link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		</div>
+		<nav class="header__navbar">
+			<ul class="header__menu">
+			   {{ range .Site.Menus.main -}}
+			    <li class="header__menu--item">
+			      <a class="header__link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+			    </li>
+			  {{ end }}
+			</ul>
+			<div class="header__social">
+				<a href="{{ .Site.Params.Social.github }}" target="_blank">
+					{{- partial "svg/github-brands" . }}
+				</a>
+				<a href="{{ .Site.Params.Social.hackernoon }}" target="_blank">
+					{{- partial "svg/hackernoon-brands" . }}
+				</a>
+				<a href="{{ .Site.Params.Social.medium }}" target="_blank">
+					{{- partial "svg/medium-m-brands" . }}
+				</a>
+				<a href="{{ .Site.Params.Social.freeCodeCamp }}" target="_blank">
+					{{- partial "svg/free-code-camp-brands" . }}
+				</a>
+				<a href="{{ .Site.Params.Social.rss }}" target="_blank">
+					{{- partial "svg/rss-solid" . }}
+				</a>
+			</div>
+		</nav>
+	</div>
+</header>

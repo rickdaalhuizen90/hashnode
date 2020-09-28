@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+{{- partial "author.html" . -}}
+
+<main class="content" role="main">
+    {{ $posts := (where (where .Site.RegularPages "Type" "posts" ) ".Params.draft" "!=" true) }}
+    {{ $paginator := .Paginate $posts }}
+
+    {{ range $paginator.Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+    
+    <!-- pagination -->
+    <nav class="pagination">
+      {{ with $paginator.Prev -}}
+        <a class="pagination__prev" href="{{ .URL }}">
+          <i class="pagination__icon"></i>
+          <span class="pagination__text">{{ T "prevPage" }}</span>
+        </a>
+      {{- end }}
+      {{ with $paginator.Next -}}
+        <a class="pagination__next" href="{{ .URL }}">
+          <span class="pagination__text">{{ T "nextPage" }}</span>
+          <i class="pagination__icon"></i>
+        </a>
+      {{- end }}
+    </nav>
+</main>
+{{ end }}

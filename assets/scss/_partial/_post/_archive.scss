@@ -1,0 +1,28 @@
+.archive {
+	list-style: none;
+	color: var(--color-text);
+
+	&__date {
+		color: var(--color-text);
+		font-weight: bold;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding: 8px 0;
+		border-bottom: 1px dotted var(--code-color-0);
+	}
+
+	@include tablet-portrait-and-up {
+		&__item {
+			flex-direction: row;
+			border-bottom: none;
+			padding-top: 0;
+		}
+
+		&__date {
+			margin-right: 8px;
+		}
+	}
+}

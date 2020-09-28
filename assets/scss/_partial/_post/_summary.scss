@@ -1,0 +1,35 @@
+.summary {
+	display: block;
+
+	&__link {
+		color: var(--text-color-hsl);
+	}
+
+	&__banner {
+		object-fit: cover;
+		object-position: center;
+		border-radius: .5rem;
+		min-height: 238px;
+		height: auto;
+		width: 100%;
+	}
+    
+	&__title {
+		font-weight: bold;
+		margin: 0;
+	}
+
+	&__date:after {
+		content: "\00a0\·";
+	}
+
+	&__meta {
+		opacity: .7;
+		margin-bottom: .4rem;
+		font-size: 1rem;
+	}
+
+	&__description {
+		margin: 0;
+	}
+}

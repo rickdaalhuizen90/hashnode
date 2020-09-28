@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    {{- partial "head.html" . -}}
+	</head>
+    <body>
+
+        {{ partial "header.html" . }}
+    
+        <div class="container-fluid container-fluid{{ if .IsHome }}--home{{else}}--page{{end}}">
+            {{- block "main" . }}{{- end }}
+        </div>
+        
+        {{- partial "scripts.html" . -}}
+    </body>
+</html>

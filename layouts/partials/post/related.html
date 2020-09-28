@@ -1,0 +1,16 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{- with $related }}
+<section class="related">
+	<h3 class="related__title">Read Next 📖</h3>
+
+	<ul class="related__items">
+		{{ range . }}
+		<li class="related__item">
+			<a href="{{ .RelPermalink }}">
+				{{ .Title }} - <small> 28 April 2020</small>
+			</a>
+		</li>
+		{{ end }}
+	</ul>
+</section>
+{{ end -}}

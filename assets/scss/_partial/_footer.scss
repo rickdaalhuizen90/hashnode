@@ -1,0 +1,36 @@
+.footer {
+	margin: 1.8rem 0 0 0;
+	font-size: .8rem;
+	
+	&__social {
+		margin: 0;
+	}
+
+	&__icon {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		margin: 0;
+		padding: 8px;
+		filter: var(--svg-color);
+
+		> a {
+			display: block;
+			height: 100%;
+		}
+	}
+
+	&__link {
+		color: var(--color-link);
+		font-weight: 800;
+
+		&:last-child:before {
+			content: "❤ ";	
+		}
+	}
+
+	&__disclaimer,
+	&__copyright {
+		margin: 0;
+	}
+}

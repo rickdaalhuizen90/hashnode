@@ -1,0 +1,15 @@
+.page {
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 3rem;
+            
+	&__back {
+		display: block;
+		margin-bottom: var(--code-color-0);
+		color: var(--color-link);
+
+		&:before {
+			content: "« ";
+		}
+	}
+}

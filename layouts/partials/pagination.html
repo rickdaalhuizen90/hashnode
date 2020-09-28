@@ -1,0 +1,13 @@
+<!-- Pagination -->
+<nav class="pagination">
+  {{ with .NextInSection -}}
+    <a class="pagination__prev" href="{{ .RelPermalink }}">
+      <span class="pagination__text--default">{{ substr .Title 0 25}}...</span>
+    </a>
+  {{- end }}
+  {{ with .PrevInSection -}}
+    <a class="pagination__next" href="{{ .RelPermalink }}">
+      <span class="pagination__text--default">{{ substr .Title 0 25}}...</span>
+    </a>
+  {{- end }}
+</nav>

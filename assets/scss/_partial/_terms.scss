@@ -1,0 +1,39 @@
+.terms {
+	text-align: center;
+	margin: 0 auto;
+	padding: 1rem;
+
+	&__icon {
+    	width: 24px;
+    	height: 24px;
+    	display: inline-block;
+    	margin-bottom: -6px;
+    	filter: var(--color-svg);
+    }
+
+	&__title {
+		text-decoration: underline;
+		padding: 8px;
+	}
+
+	&__tags {
+		color: var(--color-text);
+		text-transform: capitalize;
+	}
+
+	&__link {
+		margin-right: 8px;
+		line-height: 1.8;
+
+    	&:hover {
+    		filter: var(--color-svg-link);
+    	}
+	}
+
+	&__count {
+		position: relative;
+		top: -8px;
+		right: -2px;
+		// font-size: .6rem;
+	}
+}

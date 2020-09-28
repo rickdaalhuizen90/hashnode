@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<main class="content" role="main">
+  {{- if eq .Type "posts" -}}
+  <article lang="en" class="post">
+
+    <header class="post-header">
+      <!-- <img class="post-header__banner" src='{{ printf "%s%s" .Page.RelPermalink "banner.png" }}' /> -->
+
+      {{$path := substr .Page.RelPermalink 7 }}
+      <img class="post-header__banner" src='{{ printf "%simages/posts/desktop/%s%s" .Site.BaseURL $path "banner.png" }}' />
+
+      <h1 class="post-header__title">
+        {{.Title }}
+        <blockquote class="post-header__subtitle">{{ .Description }}</blockquote>
+      </h1>
+
+      <div class="post-header__published">
+        {{- partial "post/published" . -}}
+      </div>
+    </header>
+    
+    <div class="post__content">
+     <!--  <h3 class="header__subtitle">{{ .Description }}</h3> -->
+      {{- partial "anchored-headings.html" .Content -}}
+    </div>
+
+<!--     <time class="post__modified">
+      {{ T "lastMod" }}
+      {{ .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
+      {{ with .GitInfo }}<a href="{{ $.Site.Params.gitRepo }}/commit/{{ .Hash }}" title="{{ .Subject }}">({{ .AbbreviatedHash }})</a>{{ end }}
+    </time> -->
+
+    {{- with .Params.tags -}}
+    <div class="post__tags">
+      Tags:
+      {{ range . -}}
+        <a class="post__tag" href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+      {{ end -}}
+    </div>
+    {{- end -}}
+
+    <footer class="post__footer">
+      <!-- Related -->
+      {{- partial "post/related.html" . -}}
+
+      <!-- Pagination -->
+      {{ partial "pagination.html" . }}
+
+      <!-- Comments -->
+      {{ if or (and (.Site.Params.comment) (.Params.comment)) }}
+        {{ partial "post/disqus.html" . }}
+      {{- end -}}
+    </footer>
+  </article>
+
+  <aside class="sidebar">
+    {{- partial "post/shareable-links" . -}}
+  </aside>
+  
+  {{- else -}}
+    <article class="page">
+      <!-- <h1 class="page__title">{{ .Title }}</h1> -->
+      {{ partial "anchored-headings.html" .Content }}
+    </article>
+  {{- end -}}
+</main>
+{{ end }}
+
+{{ define "scripts" }}
+  {{/* Hardcode a specific prismjs version to avoid a redirect on every page load. */}}
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  {{/* Automatically loads the needed languages to highlight the code blocks. */}}
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+{{ end }}

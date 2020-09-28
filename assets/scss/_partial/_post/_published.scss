@@ -1,0 +1,26 @@
+.published {
+	display: flex;
+	margin-top: 3rem;
+
+	&__avatar {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 3em;
+		flex: 0 0 3em;
+		margin: .25rem 0.75rem 3rem 0;
+		border-radius: 50%;
+
+		img {
+			border-radius: 100%;
+		}
+	}
+
+	&__heading {
+		font-weight: 800;
+		font-size: 1.125em;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+}

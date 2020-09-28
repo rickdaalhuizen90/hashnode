@@ -1,0 +1,17 @@
+<div class="author">
+  <div class="author__avatar">
+    <a href="/about">
+      <img  src="{{ .Site.Author.avatar }}">
+    </a>
+  </div>
+  <p class="author__content">
+    <span class="author__heading">
+      <a href="/about">
+        {{ .Site.Author.name | safeHTML }}
+      </a>
+    </span>
+    <span class="author__bio">
+      {{ .Site.Author.bio | safeHTML }}
+    </span>
+  </p>
+</div>

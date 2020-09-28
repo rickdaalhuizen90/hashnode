@@ -1,0 +1,21 @@
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2 2006" }}
+
+<div class="published">
+  <div class="published__avatar">
+    <a href="/about">
+      <img  src="{{ .Site.Author.avatar }}">
+    </a>
+  </div>
+  <p class="published__content">
+    <span class="published__heading">
+      <a href="/about">
+        {{ T "publishedBy" }}
+        {{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}
+      </a>
+    </span>
+    <span class="published__date">
+      <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format $dateFormat }}</time>
+      <time>{{- T "readingTime" .ReadingTime -}} </time>
+    </span>
+  </p>
+</div>
