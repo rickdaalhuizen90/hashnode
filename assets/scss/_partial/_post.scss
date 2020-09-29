@@ -13,4 +13,10 @@
 			content: "#";
 		}
 	}
+
+	.post-header{
+		&__banner {
+			filter: brightness(85%);
+		}
+	}
 }

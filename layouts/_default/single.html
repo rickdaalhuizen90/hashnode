@@ -5,10 +5,21 @@
   <article lang="en" class="post">
 
     <header class="post-header">
-      <!-- <img class="post-header__banner" src='{{ printf "%s%s" .Page.RelPermalink "banner.png" }}' /> -->
-
       {{$path := substr .Page.RelPermalink 7 }}
-      <img class="post-header__banner" src='{{ printf "%simages/posts/desktop/%s%s" .Site.BaseURL $path "banner.png" }}' />
+
+      <img class="post-header__banner"
+        src='{{ printf "%simages/posts/mobile/%s%s" .Site.BaseURL $path "banner.png" }}'
+        srcset='
+          {{ printf "%simages/posts/mobile/%s%s" .Site.BaseURL $path "banner.png" }} 375w,
+          {{ printf "%simages/posts/tablet/%s%s" .Site.BaseURL $path "banner.png" }} 800w,
+          {{ printf "%simages/posts/desktop/%s%s" .Site.BaseURL $path "banner.png" }} 1024w
+        '
+        sizes="
+        (min-width: 768px): 1024px,
+        (min-width: 375px) and (max-width:  767px) 800px,
+        calc(100vw - 1.3rem),
+        "
+      />
 
       <h1 class="post-header__title">
         {{.Title }}

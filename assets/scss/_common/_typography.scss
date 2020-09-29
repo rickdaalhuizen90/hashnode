@@ -27,7 +27,7 @@ body {
   // padding: 0 var(--space-body) var(--space-body) var(--space-body);
   font-family: var(--fontstack-default);
   font-feature-settings: var(--font-features);
-  font-size: 120%;
+  font-size: 130%;
   line-height: 1.5;
   hanging-punctuation:first allow-end;
   transition:all .2s ease;
@@ -61,7 +61,7 @@ em {
   padding: .25rem;
   --text-opacity: 1;
   color: #000;
-  font-size: .8rem;
+  font-size: 1rem;
   background: #f0efed;
 }
 
