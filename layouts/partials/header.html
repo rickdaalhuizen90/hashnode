@@ -13,19 +13,19 @@
 			</ul>
 			<div class="header__social">
 				<a href="{{ .Site.Params.Social.github }}" target="_blank">
-					{{- partial "svg/github-brands" . }}
+					{{- partialCached "svg/github-brands" . }}
 				</a>
 				<a href="{{ .Site.Params.Social.hackernoon }}" target="_blank">
-					{{- partial "svg/hackernoon-brands" . }}
+					{{- partialCached "svg/hackernoon-brands" . }}
 				</a>
 				<a href="{{ .Site.Params.Social.medium }}" target="_blank">
-					{{- partial "svg/medium-m-brands" . }}
+					{{- partialCached "svg/medium-m-brands" . }}
 				</a>
 				<a href="{{ .Site.Params.Social.freeCodeCamp }}" target="_blank">
-					{{- partial "svg/free-code-camp-brands" . }}
+					{{- partialCached "svg/free-code-camp-brands" . }}
 				</a>
 				<a href="{{ .Site.Params.Social.rss }}" target="_blank">
-					{{- partial "svg/rss-solid" . }}
+					{{- partialCached "svg/rss-solid" . }}
 				</a>
 			</div>
 		</nav>

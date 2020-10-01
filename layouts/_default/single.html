@@ -8,6 +8,7 @@
       {{$path := substr .Page.RelPermalink 7 }}
 
       <img class="post-header__banner"
+        alt="{{ .Title }}"
         src='{{ printf "%simages/posts/mobile/%s%s" .Site.BaseURL $path "banner.png" }}'
         srcset='
           {{ printf "%simages/posts/mobile/%s%s" .Site.BaseURL $path "banner.png" }} 375w,
@@ -27,7 +28,7 @@
       </h1>
 
       <div class="post-header__published">
-        {{- partial "post/published" . -}}
+        {{- partialCached "post/published" . -}}
       </div>
     </header>
     

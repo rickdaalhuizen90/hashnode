@@ -3,6 +3,7 @@
 		{{$path := substr .Page.RelPermalink 7 }}
 
 		<img class="summary__banner"
+			alt="{{ .Page.Title }}"
 			src='{{ printf "%simages/posts/thumbnail/%s%s" .Site.BaseURL $path "banner.png" }}'
 			srcset='
 				{{ printf "%simages/posts/thumbnail/%s%s" .Site.BaseURL $path "banner.png" }} 750w,

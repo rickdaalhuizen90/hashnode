@@ -4,13 +4,12 @@
     {{- partial "head.html" . -}}
 	</head>
     <body>
-
-        {{ partial "header.html" . }}
+        {{ partialCached "header.html" . }}
     
         <div class="container-fluid container-fluid{{ if .IsHome }}--home{{else}}--page{{end}}">
             {{- block "main" . }}{{- end }}
         </div>
         
-        {{- partial "scripts.html" . -}}
+        {{- partialCached "scripts.html" . -}}
     </body>
 </html>

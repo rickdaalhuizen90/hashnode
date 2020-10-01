@@ -77,10 +77,7 @@ pre {
   border-radius: 4px;
   box-shadow: 3px 3px 5px rgba(0,0,0,.125);
   --space-code: var(--space-xs);
-  padding-top: var(--space-xs);
-  padding-bottom: var(--space-xs);
-  padding-left: var(--space-xs);
-  padding-right: var(--space-xs);
+  padding: 8px 16px;
   margin-left: calc(var(--space-code) * -1);
   margin-right: calc(var(--space-code) * -1);
   margin-bottom: 1.8rem;

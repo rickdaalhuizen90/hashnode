@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{- partial "author.html" . -}}
+{{- partialCached "author.html" . -}}
 
 <main class="content" role="main">
     {{ $posts := (where (where .Site.RegularPages "Type" "posts" ) ".Params.draft" "!=" true) }}

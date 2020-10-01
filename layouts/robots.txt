@@ -1,2 +1,3 @@
+Sitemap: https://rickdaalhuizen.com/sitemap.xml
 User-agent: *
 Disallow:
