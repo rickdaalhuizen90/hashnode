@@ -1,5 +1,10 @@
 .summary {
 	display: block;
+	padding: 1rem;
+
+	&:hover {
+		background: var(--higlight-color);
+	}
 
 	&__link {
 		color: var(--text-color-hsl);

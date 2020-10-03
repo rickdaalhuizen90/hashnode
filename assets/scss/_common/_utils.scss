@@ -15,6 +15,13 @@
 // that might not fit the dimensions exactly. This means the break
 // points are seamless.
 
+
+// $mq-mobile-portrait     : var(--breakpoint-xs) !default;
+// $mq-mobile-landscape    : var(--breakpoint-sm) !default;
+// $mq-tablet-portrait     : var(--breakpoint-md) !default;
+// $mq-tablet-landscape    : var(--breakpoint-lg) !default;
+// $mq-desktop             : var(--breakpoint-xl) !default;
+
 $mq-mobile-portrait     : 320px !default;
 $mq-mobile-landscape    : 480px !default;
 $mq-tablet-portrait     : 768px !default;

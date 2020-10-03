@@ -4,10 +4,6 @@
 	@media (prefers-color-scheme: dark) {}
 
 	// https://convertacolor.com/
-	--header-color-h: 350;
- 	--header-color-s: 67%;
- 	--header-color-l: 47%;
-
  	--text-color-h:210;
  	--text-color-s:12%;
  	--text-color-l:16%;
@@ -16,20 +12,7 @@
  	--link-color-s: 68%;
  	--link-color-l: 50%;
 
- 	--code-color-h: 196;
-	--code-color-s: 55%;
- 	--code-color-l: 10%;
-
- 	--tag-color-h: 42;
- 	--tag-color-s: 100%;
- 	--tag-color-l: 96%;
- 	--tag-color-border: hsl(
-		var(--tag-color-h),
-		var(--tag-color-s),
-		70%
-	);
-
- 	 --svg-color: none;
+ 	--higlight-color: #ffffe3;
 
 	// Fonts
 	--fontstack-prefix:-apple-system,BlinkMacSystemFont,;
@@ -39,101 +22,62 @@
 	--fontstack-default:var(--fontstack-prefix) var(--fontstack-sans-serif);
 	--fontstack-heading: 'Josefin Sans', sans-serif;
 	--fontstack-code: 'Hack', monospace;
-	--font-size-base:1rem;
-	--font-size-factor:1vw;
-	--font-size:1.3rem;
+	--font-size-base: 1rem;
+	--font-size-factor: 1vw;
+	--font-size: 1.3rem;
 	--font-features:"halt","ss01","ss02";
-	--line-height:calc(20 / 14);
-	--heading-letter-spacing:normal;
+	--line-height: calc(20 / 14);
+	--heading-letter-spacing: normal;
 	
 	// Spacing
-	--breakpoint-lg:1600px;
-	--breakpoint-md:1080px;
-	--breakpoint-sm:640px;
-	--breakpoint-xs:400px;
-	--space-lg:17vw;
-	--space-md:11vw;
-	--space-sm:4vw;
-	--space-xs:1.2vw;
-	--border-lg:4px;
-	--border-md:2px;
-	--border-sm:1px;
-	--nav-padding:.75vmax;
-	--nav-item-space:1.4vmax;
+	--breakpoint-xl: 1382px;
+	--breakpoint-lg: 1080px;
+	--breakpoint-md: 768px;
+	--breakpoint-sm: 480px;
+	--breakpoint-xs: 320px;
+	--space-lg: 17vw;
+	--space-md: 11vw;
+	--space-sm: 4vw;
+	--space-xs: 1.2vw;
+	--border-lg: 4px;
+	--border-md: 2px;
+	--border-sm: 1px;
 
-	// Tag color
-	--tag-color-hsl:hsl(var(--tag-color-h),var(--tag-color-s),var(--tag-color-l));
-	 
 	 // Text Colors
-	 --text-color-hsl:hsl(var(--text-color-h),var(--text-color-s),var(--text-color-l));
-	 --text-color-0:hsla(var(--text-color-hsl), 0);
-	 --text-color-3:hsla(var(--text-color-hsl), .03);
-	 --text-color-5:hsla(var(--text-color-hsl), .05);
-	 --text-color-7:hsla(var(--text-color-hsl), .07);
-	 --text-color-10:hsla(var(--text-color-hsl), .1);
-	 --text-color-20:hsla(var(--text-color-hsl), .2);
-	 --text-color-30:hsla(var(--text-color-hsl), .3);
-	 --text-color-40:hsla(var(--text-color-hsl), .4);
-	 --text-color-50:hsla(var(--text-color-hsl), .5);
-	 --text-color-60:hsla(var(--text-color-hsl), .6);
-	 --text-color-70:hsla(var(--text-color-hsl), .7);
-	 --text-color-80:hsla(var(--text-color-hsl), .8);
-	 --text-color-90:hsla(var(--text-color-hsl), .9);
+	--text-color-hsl:hsl(var(--text-color-h),var(--text-color-s),var(--text-color-l));
+	--text-color-0:hsla(var(--text-color-hsl), 0);
+	--text-color-3:hsla(var(--text-color-hsl), .03);
+	--text-color-5:hsla(var(--text-color-hsl), .05);
+	--text-color-7:hsla(var(--text-color-hsl), .07);
+	--text-color-10:hsla(var(--text-color-hsl), .1);
+	--text-color-20:hsla(var(--text-color-hsl), .2);
+	--text-color-30:hsla(var(--text-color-hsl), .3);
+	--text-color-40:hsla(var(--text-color-hsl), .4);
+	--text-color-50:hsla(var(--text-color-hsl), .5);
+	--text-color-60:hsla(var(--text-color-hsl), .6);
+	--text-color-70:hsla(var(--text-color-hsl), .7);
+	--text-color-80:hsla(var(--text-color-hsl), .8);
+	--text-color-90:hsla(var(--text-color-hsl), .9);
 	 
-	 --text-color-light:hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) / .9));
-	 --text-color-dark:hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) * .9));
-	 
-	 // Link Colors
-	 --link-color-hsl:hsl(var(--link-color-h),var(--link-color-s),var(--link-color-l));
-	 --link-color-0:hsla(var(--link-color-hsl), 0);
-	 --link-color-3:hsla(var(--link-color-hsl), .03);
-	 --link-color-5:hsla(var(--link-color-hsl), .05);
-	 --link-color-7:hsla(var(--link-color-hsl), .07);
-	 --link-color-10:hsla(var(--link-color-hsl), .1);
-	 --link-color-20:hsla(var(--link-color-hsl), .2);
-	 --link-color-30:hsla(var(--link-color-hsl), .3);
-	 --link-color-40:hsla(var(--link-color-hsl), .4);
-	 --link-color-50:hsla(var(--link-color-hsl), .5);
-	 --link-color-60:hsla(var(--link-color-hsl), .6);
-	 --link-color-70:hsla(var(--link-color-hsl), .7);
-	 --link-color-80:hsla(var(--link-color-hsl), .8);
-	 --link-color-90:hsla(var(--link-color-hsl), .9);
-	 
-	 --link-color-light: #2962ff;//@todo hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) / .9));
-	 --link-color-dark:hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) * .9));
-	 
-	 // Background colors
-	 --header-color-hsl:hsl(var(--header-color-h),var(--header-color-s),var(--header-color-l));
-	 --header-color-0:hsla(var(--header-color-hsl), 0);
-	 --header-color-3:hsla(var(--header-color-hsl), .03);
-	 --header-color-5:hsla(var(--header-color-hsl), .05);
-	 --header-color-7:hsla(var(--header-color-hsl), .07);
-	 --header-color-10:hsla(var(--header-color-hsl), .1);
-	 --header-color-20:hsla(var(--header-color-hsl), .2);
-	 --header-color-30:hsla(var(--header-color-hsl), .3);
-	 --header-color-40:hsla(var(--header-color-hsl), .4);
-	 --header-color-50:hsla(var(--header-color-hsl), .5);
-	 --header-color-60:hsla(var(--header-color-hsl), .6);
-	 --header-color-70:hsla(var(--header-color-hsl), .7);
-	 --header-color-80:hsla(var(--header-color-hsl), .8);
-	 --header-color-90:hsla(var(--header-color-hsl), .9);
-	
-	 // Code Colors
-	 --code-color-hsl:var(--code-color-h),var(--code-color-s),var(--code-color-l);
-	 --code-color-0:hsla(var(--code-color-hsl), 0);
-	 --code-color-3:hsla(var(--code-color-hsl), .03);
-	 --code-color-5:hsla(var(--code-color-hsl), .05);
-	 --code-color-7:hsla(var(--code-color-hsl), .07);
-	 --code-color-10:hsla(var(--code-color-hsl), .1);
-	 --code-color-20:hsla(var(--code-color-hsl), .2);
-	 --code-color-30:hsla(var(--code-color-hsl), .3);
-	 --code-color-40:hsla(var(--code-color-hsl), .4);
-	 --code-color-50:hsla(var(--code-color-hsl), .5);
-	 --code-color-60:hsla(var(--code-color-hsl), .6);
-	 --code-color-70:hsla(var(--code-color-hsl), .7);
-	 --code-color-80:hsla(var(--code-color-hsl), .8);
-	 --code-color-90:hsla(var(--code-color-hsl), .9);
-	 
-	 --code-color-light:hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) / .9));
-	 --code-color-dark:hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) * .9));
+	--text-color-light:hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) / .9));
+	--text-color-dark:hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) * .9));
+
+	// Link Colors
+	--link-color-hsl:hsl(var(--link-color-h),var(--link-color-s),var(--link-color-l));
+	--link-color-0:hsla(var(--link-color-hsl), 0);
+	--link-color-3:hsla(var(--link-color-hsl), .03);
+	--link-color-5:hsla(var(--link-color-hsl), .05);
+	--link-color-7:hsla(var(--link-color-hsl), .07);
+	--link-color-10:hsla(var(--link-color-hsl), .1);
+	--link-color-20:hsla(var(--link-color-hsl), .2);
+	--link-color-30:hsla(var(--link-color-hsl), .3);
+	--link-color-40:hsla(var(--link-color-hsl), .4);
+	--link-color-50:hsla(var(--link-color-hsl), .5);
+	--link-color-60:hsla(var(--link-color-hsl), .6);
+	--link-color-70:hsla(var(--link-color-hsl), .7);
+	--link-color-80:hsla(var(--link-color-hsl), .8);
+	--link-color-90:hsla(var(--link-color-hsl), .9);
+
+	--link-color-light: #2962ff;//@todo hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) / .9));
+	--link-color-dark:hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) * .9));
 }

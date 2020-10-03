@@ -2,18 +2,6 @@
 	<a class="summary__link" href="{{.Page.RelPermalink }}">
 		{{$path := substr .Page.RelPermalink 7 }}
 
-		<img class="summary__banner"
-			alt="{{ .Page.Title }}"
-			src='{{ printf "%simages/posts/thumbnail/%s%s" .Site.BaseURL $path "banner.png" }}'
-			srcset='
-				{{ printf "%simages/posts/thumbnail/%s%s" .Site.BaseURL $path "banner.png" }} 750w,
-				{{ printf "%simages/posts/tablet/%s%s" .Site.BaseURL $path "banner.png" }} 1600w
-			'
-			sizes="
-			(min-width: 375px) and (max-width:  767px) 800px,
-			calc(100vw - calc(866px - 4rem))" 
-		/>
-
 		<h3 class="summary__title">
 			{{ .Page.Title }}
 		</h3>
