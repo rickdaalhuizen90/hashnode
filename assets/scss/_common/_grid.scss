@@ -1,8 +1,11 @@
 .container-fluid {
 	display: block;
 	margin: 0 auto;
-	padding: 0 1.5rem 3rem 1.5rem;
 
+	.content .page {
+		padding: 1.5rem;
+	}
+	
 	@include desktop-and-up {
 		max-width: 1024px;
 	}
@@ -10,6 +13,7 @@
 
 .container-fluid--home {
 	display: block;
+	padding: 0 1.5rem 3rem 1.5rem;
 
 	.content {
 		margin-top: 10px;
