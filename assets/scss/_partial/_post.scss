@@ -5,16 +5,15 @@
 @import "_post/header";
 
 .post {
-
 	&__tag {
 		&:before {
 			content: "#";
 		}
 	}
 
-	.post-header{
-		&__banner {
-			filter: brightness(85%);
-		}
+	&__content,
+	&__tags,
+	&__footer {
+		padding: 0 1.5rem;
 	}
 }

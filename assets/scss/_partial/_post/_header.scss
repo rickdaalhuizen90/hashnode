@@ -1,9 +1,14 @@
 .post-header {
 	&__banner {
 		object-fit: cover;
-		height: 25rem;
+		height: 30rem;
 		width: 100%;
-		object-position: center;
+		object-position: bottom;
+		filter: brightness(95%);
+	}
+
+	&__title {
+		padding: 0 1.2rem;
 	}
 
 	&__subtitle {

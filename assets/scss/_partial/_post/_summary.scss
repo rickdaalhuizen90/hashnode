@@ -1,6 +1,11 @@
 .summary {
 	display: block;
 	padding: 1rem;
+	border-bottom: 1px solid #eee;
+
+	@include tablet-landscape-and-up {
+		border-bottom: none;
+	}
 
 	&:hover {
 		background: var(--higlight-color);
