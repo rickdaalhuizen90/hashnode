@@ -9,7 +9,7 @@
 
       <picture>
         <source
-          class="post-header__banner"
+          class="post-header__banner lazy"
           type="image/webp"
           srcset='
             {{ printf "%simages/posts/mobile/%s%s" .Site.BaseURL $path "banner.webp" }} 375w,
@@ -23,7 +23,7 @@
           "
         />
         <img
-          class="post-header__banner"
+          class="post-header__banner lazy"
           alt="{{ .Title }}"
           src='{{ printf "%simages/posts/mobile/%s%s" .Site.BaseURL $path "banner.png" }}' />
       </picture>

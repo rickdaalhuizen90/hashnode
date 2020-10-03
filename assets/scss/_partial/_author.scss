@@ -5,11 +5,15 @@
 	&__avatar {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 6rem;
-		flex: 0 0 6rem;
+		flex: 0 0 10rem;
 		margin-right: 2rem;
 
-		img {
-			border-radius: 100%;
+		@include tablet-landscape-and-up {
+			flex: 0 0 12.5rem;
+		}
+
+		@include desktop-and-up {
+			flex: 0 0 15rem;
 		}
 	}
 
@@ -28,5 +32,6 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
+		align-self: center;
 	}
 }

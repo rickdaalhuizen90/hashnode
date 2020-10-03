@@ -15,3 +15,9 @@
 @import "_partial/404";
 
 /* Use hugo pipes to remove unused scss */
+
+ .hero {
+	object-fit: contain;
+	height: 20rem;
+	width: inherit;
+}
