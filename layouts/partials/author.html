@@ -1,7 +1,8 @@
 <div class="author">
   <div class="author__avatar">
     <a href="/about">
-      <img src="{{ .Site.BaseURL }}images/illustration.png" />
+ <!--      <img src="{{ .Site.BaseURL }}images/3.png" /> -->
+      {{ partialCached "svg/illustration.html" .}}
     </a>
   </div>
   <p class="author__content">

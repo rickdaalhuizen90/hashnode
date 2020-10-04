@@ -1,19 +1,27 @@
 .author {
 	display: flex;
-	padding-top: 3rem;
+	padding-top: 1.3rem;
+	flex-direction: column;
+	background-color: #f9feff;
+
+	@include tablet-landscape-and-up {
+		flex-direction: row;
+	}
 
 	&__avatar {
 		-webkit-box-flex: 0;
-		-ms-flex: 0 0 6rem;
-		flex: 0 0 10rem;
-		margin-right: 2rem;
+		flex: auto;
 
 		@include tablet-landscape-and-up {
-			flex: 0 0 12.5rem;
+			flex: 0 0 22.5rem;
 		}
 
 		@include desktop-and-up {
-			flex: 0 0 15rem;
+			flex: 0 0 25rem;
+		}
+
+		img {
+			margin: 0;
 		}
 	}
 
@@ -29,9 +37,14 @@
 		}
 	}
 
+	&__bio {
+		font-style: italic;
+	}
+
 	&__content {
 		display: flex;
 		flex-direction: column;
 		align-self: center;
+		padding: 1.3rem;
 	}
 }

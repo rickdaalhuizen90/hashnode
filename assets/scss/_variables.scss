@@ -12,7 +12,7 @@
  	--link-color-s: 68%;
  	--link-color-l: 50%;
 
- 	--higlight-color: #ffffe3;
+ 	--higlight-color: #fff6ea;//#ffffe3;
 
 	// Fonts
 	--fontstack-prefix:-apple-system,BlinkMacSystemFont,;
@@ -59,8 +59,8 @@
 	--text-color-80:hsla(var(--text-color-hsl), .8);
 	--text-color-90:hsla(var(--text-color-hsl), .9);
 	 
-	--text-color-light:hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) / .9));
-	--text-color-dark:hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) * .9));
+	--text-color-light:#2e2f3e;//hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) / .9));
+	--text-color-dark:#2e2f3e;//hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) * .9));
 
 	// Link Colors
 	--link-color-hsl:hsl(var(--link-color-h),var(--link-color-s),var(--link-color-l));

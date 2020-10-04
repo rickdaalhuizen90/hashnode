@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  color:var(--text-color-hsl);
+  color: #2e2f3e!important;//var(--text-color-hsl);
   text-size-adjust:none;
   text-rendering:optimizelegibility;
   image-rendering:optimizequality;
@@ -60,9 +60,9 @@ em {
   border-radius: .25rem;
   padding: .25rem;
   --text-opacity: 1;
-  color: #000;
+  color: #2e2f3e;
   font-size: 1rem;
-  background: #f0efed;
+  background: #fff6ea;
 }
 
 img,
