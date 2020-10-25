@@ -37,11 +37,12 @@
         &--item {
             list-style: none;
             display: flex;
+            border-bottom: 3px solid transparent;
 
             &:hover,
             &:active {
-                opacity: .7;
                 background: #f9f9f9;
+                border-bottom: 3px solid;
             }
 
             a {

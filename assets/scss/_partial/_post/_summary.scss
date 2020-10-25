@@ -8,8 +8,12 @@
 	}
 
 	&:hover {
-		opacity: .7;
 		background: #f9f9f9;
+		
+		h3 {
+			text-decoration: underline;
+			color: var(--text-color-link);
+		}
 	}
 
 	&__link {
